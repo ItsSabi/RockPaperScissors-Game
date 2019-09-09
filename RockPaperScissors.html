@@ -10,7 +10,7 @@ function computerPlay(){
 
     let handPick = ["Rock", "Paper", "Scissors"]
 
-    return "Rock" || "Paper" || "Scissors"
+    return handPick[Math.floor(Math.random()*handPick.length)]
 }
 
 //Plays one round of R,P,S to see who wins and advises who won
