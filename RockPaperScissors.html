@@ -9,6 +9,21 @@ function computerPlay(){
 //Plays one round of R,P,S to see who wins and advises who won
 function gameRound(playerSelection, computerSelection){
 
+    let computerResult = computerPlay()
+
+    switch (computerResult){
+        case "Rock" :
+          return "It's a tie!";
+             break;
+        case "Paper":
+          return "You lose! Paper beats rock";
+             break;
+        case "Scissors":
+          return "You win! Rock beats scissors";
+             break;
+        
+    }
+
 
     return "You lose! Paper beats Rock"
 }
