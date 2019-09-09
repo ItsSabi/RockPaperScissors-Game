@@ -6,7 +6,7 @@
 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
-    console.log("Running computerPlay function")
+    console.log("First function -computerPlay- is running. \n")
 
     let handPick = ["Rock", "Paper", "Scissors"]
 
@@ -20,12 +20,15 @@ function gameRound(playerSelection, computerSelection){
     console.log(computerResult)
     switch (computerResult){
         case "Rock" :
+        ++ties
           return "It's a tie!";
              break;
         case "Paper":
+        ++playerWins
           return "You lose! Paper beats rock";
              break;
         case "Scissors":
+        ++computerWins
           return "You win! Rock beats scissors";
              break;
         
@@ -38,14 +41,13 @@ function gameRound(playerSelection, computerSelection){
 //Plays 5 rounds of the game and keeps score, then tells who the winner/loser is at the end
 function game(){
     console.log("Game function IS RUNNING")
-    let playerWins = 0
-    let computerWins = 0
+   
     let i = 0
 
 
 //Will run gameRound() five times
 do {
-    gameRound()
+   console.log(gameRound())
     i++
     console.log("Playing game #" + i)
 }
@@ -60,14 +62,23 @@ while (i < 5)
 }
 
 
+//FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
 const playerSelection = "rock"
 const computerSelection = computerPlay()
 
+let playerWins = 0
+let computerWins = 0
+let ties = 0
+
 console.log("Running game function.")
 game()
-console.log(gameRound(playerSelection, computerSelection))
+
+console.log("Player won " + playerWins + " rounds")
+console.log("The computer won " + computerWins + " rounds")
+console.log("There were "+ ties + " ties in this game.")
+//console.log(gameRound(playerSelection, computerSelection))
 
 
 </script>
