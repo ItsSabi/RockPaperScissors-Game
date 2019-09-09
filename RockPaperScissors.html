@@ -6,7 +6,7 @@
 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
-    console.log("First function -computerPlay- is running. \n")
+    //console.log("First function -computerPlay- is running. \n")
 
     let handPick = ["Rock", "Paper", "Scissors"]
 
@@ -17,7 +17,7 @@ function computerPlay(){
 function gameRound(playerSelection, computerSelection){
 
     let computerResult = computerPlay()
-    console.log(computerResult)
+   
     switch (computerResult){
         case "Rock" :
         ++ties
@@ -49,7 +49,7 @@ function game(){
 do {
    console.log(gameRound())
     i++
-    console.log("Playing game #" + i)
+    console.log("Played game #" + i)
 }
 while (i < 5)
 
