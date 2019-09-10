@@ -21,9 +21,10 @@ function computerPlay(){
 function gameRound(playerSelection, computerSelection){
 
     let computerResult = computerPlay()
-   
-    switch (computerResult){
-        case "Rock" :
+
+   if (playerSelection.ignoreCase == "rock"){
+    switch (computerResult.ignoreCase){
+        case "rock" :
         ++ties
           return "It's a tie!";
              break;
@@ -37,6 +38,44 @@ function gameRound(playerSelection, computerSelection){
              break;
         
     }
+    
+    if (playerSelection.ignoreCase =="paper"){
+        switch (computerResult.ignoreCase){
+        case "paper" :
+        ++ties
+          return "It's a tie!";
+             break;
+        case "rock":
+        ++playerWins
+          return "You win! Paper beats rock";
+             break;
+        case "Scissors":
+        ++computerWins
+          return "You lose! Rock beats scissors";
+             break;
+        
+     }
+    }
+
+    if (playerSelection.ignoreCase =="scissors"){
+        switch (computerResult.ignoreCase){
+        case "scissors" :
+        ++ties
+          return "It's a tie!";
+             break;
+        case "rock":
+        ++playerWins
+          return "You win! Paper beats rock";
+             break;
+        case "Scissors":
+        ++computerWins
+          return "You lose! Rock beats scissors";
+             break;
+        
+     }
+    }
+
+   }
 
 
     
@@ -64,7 +103,7 @@ while (i < 5)
 //FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
-const playerSelection = prompt() 
+const playerSelection = prompt()
 const computerSelection = computerPlay()
 
 let playerWins = 0
