@@ -21,11 +21,15 @@ function computerPlay(){
 //Plays one round of R,P,S to see who wins and advises who won
 function gameRound(playerSelection, computerSelection){
 
-    let computerResult = computerSelection
-    let pResult= playerSelection
+    
 
-   if (pResult.ignoreCase == "rock"){
-    switch (computerResult.ignoreCase){
+    console.log("Running gameRound function!");
+    console.log(computerSelection);
+    console.log(playerSelection);
+
+
+   if (playerSelection.ignoreCase == "rock"){
+    switch (computerSelection.ignoreCase){
         case "rock" :
         ++ties
           return "It's a tie!";
@@ -41,8 +45,8 @@ function gameRound(playerSelection, computerSelection){
         
     }
     
-    if (pResult.ignoreCase =="paper"){
-        switch (computerResult.ignoreCase){
+    if (playerSelection.ignoreCase =="paper"){
+        switch (computerSelection.ignoreCase){
         case "paper" :
         ++ties
           return "It's a tie!";
@@ -59,8 +63,8 @@ function gameRound(playerSelection, computerSelection){
      }
     }
 
-    if (pResult.ignoreCase =="scissors"){
-        switch (computerResult.ignoreCase){
+    if (playerSelection.ignoreCase =="scissors"){
+        switch (computerSelection.ignoreCase){
         case "scissors" :
         ++ties
           return "It's a tie!";
