@@ -4,7 +4,8 @@
 
 
         <h1>
-                Rock Paper Scissors Game on Console
+                Rock Paper Scissors Game  
+                Running on Console
                 </h1>
 <script>
 
@@ -20,9 +21,10 @@ function computerPlay(){
 //Plays one round of R,P,S to see who wins and advises who won
 function gameRound(playerSelection, computerSelection){
 
-    let computerResult = computerPlay()
+    let computerResult = computerSelection
+    let pResult= playerSelection
 
-   if (playerSelection.ignoreCase == "rock"){
+   if (pResult.ignoreCase == "rock"){
     switch (computerResult.ignoreCase){
         case "rock" :
         ++ties
@@ -39,7 +41,7 @@ function gameRound(playerSelection, computerSelection){
         
     }
     
-    if (playerSelection.ignoreCase =="paper"){
+    if (pResult.ignoreCase =="paper"){
         switch (computerResult.ignoreCase){
         case "paper" :
         ++ties
@@ -57,7 +59,7 @@ function gameRound(playerSelection, computerSelection){
      }
     }
 
-    if (playerSelection.ignoreCase =="scissors"){
+    if (pResult.ignoreCase =="scissors"){
         switch (computerResult.ignoreCase){
         case "scissors" :
         ++ties
@@ -103,8 +105,8 @@ while (i < 5)
 //FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
-const playerSelection = prompt()
-const computerSelection = computerPlay()
+const playerSelection = prompt("What's your choice?");
+const computerSelection = computerPlay();
 
 let playerWins = 0
 let computerWins = 0
