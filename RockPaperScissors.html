@@ -8,12 +8,12 @@
                 Running on Console
                 </h1>
 <script>
-
+ document.body.style.backgroundColor = "grey"; 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
     //console.log("First function -computerPlay- is running. \n")
 
-    let handPick = ["Rock", "Paper", "Scissors"]
+    let handPick = ["rock", "paper", "scissors"]
 
     return handPick[Math.floor(Math.random()*handPick.length)]
 }
@@ -21,32 +21,34 @@ function computerPlay(){
 //Plays one round of R,P,S to see who wins and advises who won
 function gameRound(playerSelection, computerSelection){
 
-    
+    computerSelection = computerPlay();
 
     console.log("Running gameRound function!");
     console.log(computerSelection);
     console.log(playerSelection);
 
 
-   if (playerSelection.ignoreCase == "rock"){
-    switch (computerSelection.ignoreCase){
+   if (playerSelection == "rock"){
+       //console.log("Checking if its rock");
+    switch (computerSelection){
         case "rock" :
         ++ties
           return "It's a tie!";
              break;
-        case "Paper":
+        case "paper":
         ++playerWins
           return "You lose! Paper beats rock";
              break;
-        case "Scissors":
+        case "scissors":
         ++computerWins
           return "You win! Rock beats scissors";
              break;
         
-    }
-    
-    if (playerSelection.ignoreCase =="paper"){
-        switch (computerSelection.ignoreCase){
+    } 
+   }
+   if (playerSelection =="paper"){
+          //  console.log("Checking if it's paper");
+        switch (computerSelection){
         case "paper" :
         ++ties
           return "It's a tie!";
@@ -63,8 +65,9 @@ function gameRound(playerSelection, computerSelection){
      }
     }
 
-    if (playerSelection.ignoreCase =="scissors"){
-        switch (computerSelection.ignoreCase){
+    if (playerSelection=="scissors"){
+      //  console.log("Checking if its Scissors");
+        switch (computerSelection){
         case "scissors" :
         ++ties
           return "It's a tie!";
@@ -80,8 +83,6 @@ function gameRound(playerSelection, computerSelection){
         
      }
     }
-
-   }
 
 
     
@@ -109,8 +110,8 @@ while (i < 5)
 //FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
-const playerSelection = prompt("What's your choice?");
-const computerSelection = computerPlay();
+const playerSelection = prompt("What's your choice?").toLowerCase();
+let computerSelection;
 
 let playerWins = 0
 let computerWins = 0
