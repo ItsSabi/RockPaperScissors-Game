@@ -49,9 +49,9 @@ function gameRound(playerSelection, computerSelection){
         ++playerWins
           return "You win! Paper beats rock";
              break;
-        case "Scissors":
+        case "scissors":
         ++computerWins
-          return "You lose! Rock beats scissors";
+          return "You lose! Scissors beats paper";
              break;
         
      }
@@ -65,11 +65,11 @@ function gameRound(playerSelection, computerSelection){
              break;
         case "rock":
         ++playerWins
-          return "You win! Paper beats rock";
-             break;
-        case "Scissors":
-        ++computerWins
           return "You lose! Rock beats scissors";
+             break;
+        case "paper":
+        ++computerWins
+          return "You win! Scissors beats paper";
              break;
         
      }
