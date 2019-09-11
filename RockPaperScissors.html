@@ -22,10 +22,12 @@ function computerPlay(){
 function gameRound(playerSelection, computerSelection){
 
     computerSelection = computerPlay();
-
     console.log("Running gameRound function!");
     console.log(computerSelection);
     console.log(playerSelection);
+
+   
+
 
 
    if (playerSelection == "rock"){
@@ -110,12 +112,15 @@ while (i < 5)
 //FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
-const playerSelection = prompt("What's your choice?").toLowerCase();
+let playerSelection = prompt("What's your choice?").toLowerCase();
 let computerSelection;
 
 let playerWins = 0
 let computerWins = 0
 let ties = 0
+ console.log("Player selection is " + playerSelection)
+
+
 
 console.log("Running game function.")
 game()
