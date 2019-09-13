@@ -19,7 +19,10 @@
 
 <!-- Will add a basic UI that will have buttons and show scores-->
 <script>
- document.body.style.backgroundColor = "grey"; 
+
+
+
+document.body.style.backgroundColor = "grey"; 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
     //console.log("First function -computerPlay- is running. \n")
@@ -108,32 +111,31 @@ function game(){
     let i = 0
 
 
-//Will run gameRound() five times
-do {
+  //Will run gameRound() five times
+  do {
    console.log(gameRound(playerSelection,computerSelection))
     i++
     console.log("Played game #" + i)
-}
-while (i < 5)
+  }
+  while (i < 5)
 
 
-}
+  }
 
 
 //FUNCTION CODE IS ABOVE THIS COMMENT 
 
 //Declared constants for the purpose of easily running the program.
-let playerSelection = prompt("What's your choice?").toLowerCase();
-let computerSelection;
+  let playerSelection = prompt("What's your choice?").toLowerCase();
+  let computerSelection;
 
-let playerWins = 0
-let computerWins = 0
-let ties = 0
- console.log("Player selection is " + playerSelection)
+  let playerWins = 0
+  let computerWins = 0
+  let ties = 0
 
-
-
+console.log("Player selection is " + playerSelection)
 console.log("Running game function.")
+
 game()
 
 console.log("Player won " + playerWins + " rounds")
@@ -142,11 +144,7 @@ console.log("There were "+ ties + " ties in this game.")
 //console.log(gameRound(playerSelection, computerSelection))
 
 
-//Adding basic GUI to this project 
-divStyle.backgroundCOlor = "cyan";
-divStyle.border = '3px solid black';
-divStyle.width = "50px";
-divStyle.height = '100px'
+
 
 </script>
 
