@@ -39,8 +39,8 @@ button.addEventListener('click', (e) => {
 
     let playerSelection =button.id
     console.log("You are going to throw  "+ playerSelection);
-  gameRound(playerSelection, computerSelection);
-
+  //gameRound(playerSelection, computerSelection);
+console.log(gameRound(playerSelection, computerSelection))
 });
 });
 
@@ -57,10 +57,7 @@ button.addEventListener('click', (e) => {
 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
-    
-
     let handPick = ["rock", "paper", "scissors"]
-
     return handPick[Math.floor(Math.random()*handPick.length)]
 }
 
@@ -130,7 +127,6 @@ function gameRound(playerSelection, computerSelection){
 
 console.log("Player selection is " + playerSelection)
 console.log("Running game function.")
-
 
 
 console.log("Player won " + playerWins + " rounds")
