@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="utf-8"/>
+<!--This program will have a basic UI
+based off the Rock, Paper Scissors game I previously created-->
+
+        <h1>
+                Rock Paper Scissors Game  
+                Running on Console
+                </h1>
+
+                <div> 
+                  
+                  
+                  <h2>Rock Paper Scissors! Who will win?</h2>
+                
+                </div>
+
+
+<!-- Will add a basic UI that will have buttons and show scores-->
+<script>
+document.body.style.backgroundColor = "grey"; 
+
+
+//Declared constants for the purpose of easily running the program.
+let playerSelection = prompt("What's your choice?").toLowerCase();
+  let computerSelection;
+
+  let playerWins = 0
+  let computerWins = 0
+  let ties = 0
+
+console.log("Player selection is " + playerSelection)
+console.log("Running game function.")
+
+game()
+
+console.log("Player won " + playerWins + " rounds")
+console.log("The computer won " + computerWins + " rounds")
+console.log("There were "+ ties + " ties in this game.")
+//console.log(gameRound(playerSelection, computerSelection))
+
+
+
+
+//Runs and picks if the computer will play Rock, paper, or scissors
+function computerPlay(){
+    //console.log("First function -computerPlay- is running. \n")
+
+    let handPick = ["rock", "paper", "scissors"]
+
+    return handPick[Math.floor(Math.random()*handPick.length)]
+}
+
+//Plays one round of R,P,S to see who wins and advises who won
+function gameRound(playerSelection, computerSelection){
+
+    computerSelection = computerPlay();
+    console.log("Running gameRound function!");
+    console.log(computerSelection);
+    console.log(playerSelection);
+
+
+   if (playerSelection == "rock"){
+       
+    switch (computerSelection){
+        case "rock" :
+        ++ties
+          return "It's a tie!";
+             break;
+        case "paper":
+        ++playerWins
+          return "You lose! Paper beats rock";
+             break;
+        case "scissors":
+        ++computerWins
+          return "You win! Rock beats scissors";
+             break;
+        
+    } 
+   }
+   if (playerSelection =="paper"){
+          
+        switch (computerSelection){
+        case "paper" :
+        ++ties
+          return "It's a tie!";
+             break;
+        case "rock":
+        ++playerWins
+          return "You win! Paper beats rock";
+             break;
+        case "scissors":
+        ++computerWins
+          return "You lose! Scissors beats paper";
+             break;
+        
+     }
+    }
+
+    if (playerSelection=="scissors"){
+      
+        switch (computerSelection){
+        case "scissors" :
+        ++ties
+          return "It's a tie!";
+             break;
+        case "rock":
+        ++playerWins
+          return "You lose! Rock beats scissors";
+             break;
+        case "paper":
+        ++computerWins
+          return "You win! Scissors beats paper";
+             break;
+        
+     }
+    }
+
+
+    
+}
+
+//Plays 5 rounds of the game and keeps score, then tells who the winner/loser is at the end
+//function game(){
+ //   console.log("Game function IS RUNNING")
+   
+ //   let i = 0
+
+
+  //Will run gameRound() five times
+ // do {
+ //  console.log(gameRound(playerSelection,computerSelection))
+  //  i++
+  //  console.log("Played game #" + i)
+  //}
+ // while (i < 5)
+
+
+ // }
+
+
+//FUNCTION CODE IS ABOVE THIS COMMENT 
+
+
+
+
+</script>
+
+
+
+</html>
