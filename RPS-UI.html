@@ -28,7 +28,10 @@ document.body.style.backgroundColor = "grey";
 
 
 const buttons = document.querySelectorAll('button');
-
+  let computerSelection;
+  let playerWins = 0
+  let computerWins = 0
+  let ties = 0
 
 
  buttons.forEach((button) => {
@@ -41,14 +44,14 @@ button.addEventListener('click', (e) => {
     console.log("You are going to throw  "+ playerSelection);
   //gameRound(playerSelection, computerSelection);
 console.log(gameRound(playerSelection, computerSelection))
+console.log("Player won "+ playerWins);
+console.log("Computer won " + computerWins);
+console.log("And there were " + ties + " ties!");
 });
 });
 
 
-  let computerSelection;
-  let playerWins = 0
-  let computerWins = 0
-  let ties = 0
+  
 
 
 
