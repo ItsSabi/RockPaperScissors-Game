@@ -6,7 +6,7 @@ based off the Rock, Paper Scissors game I previously created-->
 
         <h1>
                 Rock Paper Scissors Game  
-                Running on Console
+                
                 </h1>
 
                 <div> 
@@ -17,7 +17,7 @@ based off the Rock, Paper Scissors game I previously created-->
                 </div>
 
 
-<!-- Will add a basic UI that will have buttons and show scores-->
+
 <script>
 document.body.style.backgroundColor = "grey"; 
 
@@ -33,19 +33,19 @@ let playerSelection = prompt("What's your choice?").toLowerCase();
 console.log("Player selection is " + playerSelection)
 console.log("Running game function.")
 
-game()
+
 
 console.log("Player won " + playerWins + " rounds")
 console.log("The computer won " + computerWins + " rounds")
 console.log("There were "+ ties + " ties in this game.")
-//console.log(gameRound(playerSelection, computerSelection))
+
 
 
 
 
 //Runs and picks if the computer will play Rock, paper, or scissors
 function computerPlay(){
-    //console.log("First function -computerPlay- is running. \n")
+    
 
     let handPick = ["rock", "paper", "scissors"]
 
@@ -121,23 +121,6 @@ function gameRound(playerSelection, computerSelection){
     
 }
 
-//Plays 5 rounds of the game and keeps score, then tells who the winner/loser is at the end
-//function game(){
- //   console.log("Game function IS RUNNING")
-   
- //   let i = 0
-
-
-  //Will run gameRound() five times
- // do {
- //  console.log(gameRound(playerSelection,computerSelection))
-  //  i++
-  //  console.log("Played game #" + i)
-  //}
- // while (i < 5)
-
-
- // }
 
 
 //FUNCTION CODE IS ABOVE THIS COMMENT 
