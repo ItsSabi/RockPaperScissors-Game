@@ -22,6 +22,10 @@ based off the Rock, Paper Scissors game I previously created-->
                     <button id="scissors" value = 'scissors'>Scissors </button>
                 </div>
 
+                <p id ="wins"></p>
+                <p id="lose"></p>
+                <p id="ties"></p>
+
 
 <script>
 document.body.style.backgroundColor = "grey"; 
@@ -44,9 +48,10 @@ button.addEventListener('click', (e) => {
     console.log("You are going to throw  "+ playerSelection);
   //gameRound(playerSelection, computerSelection);
 console.log(gameRound(playerSelection, computerSelection))
-console.log("Player won "+ playerWins);
-console.log("Computer won " + computerWins);
-console.log("And there were " + ties + " ties!");
+
+document.getElementById("wins").innerHTML ="Player won "+ playerWins;
+document.getElementById("lose").innerHTML="Computer won " + computerWins;
+document.getElementById("ties").innerHTML= "And there were " + ties + " ties!";
 });
 });
 
