@@ -44,8 +44,7 @@ based off the Rock, Paper Scissors game I previously created-->
                     <button class="button" id="rock" value ="rock">Rock</button>
                     <button class="button" id="paper" value= 'paper'>Paper</button>
                     <button class="button" id="scissors" value = 'scissors'>Scissors </button>
-                    <button class="button" id= "reset" value = "reset">Reset</button>
-
+                    
                 <h3 id = "playerSelect" style="color:cadetblue"></h3>
                 <p id ="wins" style ="color: green"></p>
                 <p id="lose" style="color:red"></p>
@@ -175,7 +174,23 @@ function gameRound(playerSelection, computerSelection){
         ties = 0;
         playerWins =0;
         computerWins = 0;
-        
+
+
+/*
+Commenting out until I get it to work properly. 
+
+let removePlaySelect = document.getElementById("playerSelect");
+removePlaySelect.parentNode.removeChild(removePlaySelect);       
+
+let removeWins = document.getElementById("wins")
+removeWins.parentNode.removeChild(removeWins);
+
+let removeLose =document.getElementById("lose");
+removeLose.parentNode.removeChild(removeLose);
+
+let removeTies =document.getElementById("ties");
+removeTies.parentNode.removeChild(removeTies);
+*/
         return "Resetting the game";
 
     }
