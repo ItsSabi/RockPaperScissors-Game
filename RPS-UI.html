@@ -3,30 +3,62 @@
         <meta charset="utf-8"/>
 <!--This program will have a basic UI
 based off the Rock, Paper Scissors game I previously created-->
+    <style>
+    
+    .centerSpot{
+       
+       
+        text-align:end;
+    }
 
-        <h1>
-                Rock Paper Scissors Game  
-                
-                </h1>
+    .container{
+        text-align:center;
+    }
 
-                <div> 
+   .button{
+        width: 100px;
+        height: 30px;
+        position:static;
+        display: inline-block;
+        top: 50%;
+    
+    }
+    
+   
+    
+    </style>
+
+
+               
+
+                <div class = "container"> 
                   
-                  
+                 <h1> Rock Paper Scissors Game  </h1>
                   <h2>Rock Paper Scissors! Who will win?</h2>
                 
                 </div>
 
-                <div id = "container" >
-                    <button id="rock" value ="rock">Rock</button>
-                    <button id="paper" value= 'paper'>Paper</button>
-                    <button id="scissors" value = 'scissors'>Scissors </button>
-                    <button id= "reset" value = "reset">Reset</button>
-                </div>
+                <div  class = 'container' id = "container" >
+
+
+                    <button class="button" id="rock" value ="rock">Rock</button>
+                    <button class="button" id="paper" value= 'paper'>Paper</button>
+                    <button class="button" id="scissors" value = 'scissors'>Scissors </button>
+                    <button class="button" id= "reset" value = "reset">Reset</button>
 
                 <h3 id = "playerSelect" style="color:cadetblue"></h3>
                 <p id ="wins" style ="color: green"></p>
                 <p id="lose" style="color:red"></p>
                 <p id="ties"></p>
+                </div>
+
+                <div class= "container">
+                  <button class="button" id= "reset" value = "reset">Reset</button>
+
+                </div>
+
+
+          
 
 
 <script>
@@ -143,6 +175,7 @@ function gameRound(playerSelection, computerSelection){
         ties = 0;
         playerWins =0;
         computerWins = 0;
+        
         return "Resetting the game";
 
     }
